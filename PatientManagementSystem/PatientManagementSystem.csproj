@@ -6,4 +6,22 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.7.24405.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.7.24405.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Components\Image\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\bootstrap\Images\doctor-and-senior-patient.jpg" />
+      <None Include="wwwroot\bootstrap\Images\OIP.jpg" />
+      <None Include="wwwroot\bootstrap\Images\OTeam.jpg" />
+    </ItemGroup>
+
 </Project>

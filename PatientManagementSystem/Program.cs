@@ -1,10 +1,15 @@
 using PatientManagementSystem.Components;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Register the AppDbContext with SQLite configuration
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=Data/Appointments.db"));
 
 var app = builder.Build();
 
